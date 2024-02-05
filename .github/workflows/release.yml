@@ -10,7 +10,7 @@ permissions:
 
 env:
   IMAGE_NAME: signal-cli
-  IMAGE_REGISTRY: ghcr.io/asamk
+  IMAGE_REGISTRY: ghcr.io/keylimebox
   REGISTRY_USER: ${{ github.actor }}
   REGISTRY_PASSWORD: ${{ github.token }}
 
@@ -19,7 +19,7 @@ jobs:
   ci_wf:
     permissions:
       contents: write
-    uses: AsamK/signal-cli/.github/workflows/ci.yml@master
+    uses: keylimebox/signal-cli/.github/workflows/ci.yml@master
     # ${{ github.repository }} not accepted here
 
   lib_to_jar:
